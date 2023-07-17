@@ -1,0 +1,217 @@
+
+:root {
+    --white: white;
+    --black: black;
+    --grey: #eaeaea
+}
+
+
+body {
+    margin: 0;
+}
+/*TEST*/
+/*div, li, header {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+.first-section {
+    background-image: url("assets/img/fotka.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 30px;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*LOGO*/
+.logo {
+    margin: 10px 10px 10px 30px;
+}
+.logo img {
+    width: 110px;
+}
+
+/*navigation*/
+
+#nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+
+#nav-links a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav-links a:link, #nav-links a:visited, #nav-links a:active   {
+    color: var(--white);
+}
+
+#nav-links a:hover {
+    color: gainsboro;
+}
+
+#side-menu-trigger {
+    margin: 10px;
+}
+
+#side-menu-trigger button {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.main-header {
+    color: var(--white);
+}
+
+.contact-button {
+    background-color: rgba(0,0,0,0);
+    color: var(--white);
+    border: 2px solid var(--white);
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.contact-button:hover {
+    color: var(--grey);
+}
+
+.contact-icons {
+    color: var(--white);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-icons svg {
+    cursor: pointer;
+}
+
+.contact-icons svg:hover {
+    color: var(--black);
+}
+
+.second-section {
+    padding: 20px;
+}
+
+.second-section header {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery-image img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.gallery-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.parallax {
+    background-image: url("assets/img/kuchniegudykawroclaw.png");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /**/
+}
+.parallax-container {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.how-we-work {
+    padding: 60px;
+    text-align: center;
+}
+
+.folders {
+    display: flex;
+    margin: 80px 0;
+}
+
+.folder {
+    background-color: var(--grey);
+    padding: 20px;
+    margin: 15px;
+}
+
+#folders-button {
+    background-color: var(--black);
+    color: var(--white);
+    width: 400px;
+    height: 50px;
+}
+
+.about-us {
+    background-color: var(--grey);
+    display: flex;
+    padding: 40px;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        display: block;
+        padding: 10px;
+    }
+
+    #nav-links {
+        display: none;
+        /*display: flex;*/
+        justify-content: center;
+    }
+
+    #nav-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+    #nav-links a {
+        text-align: center;
+    }
+
+    #side-menu-trigger button {
+        display: block;
+    }
+}
