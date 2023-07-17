@@ -16,9 +16,9 @@ h1, p {
 }
 
 /*TEST*/
-div, li, header {
-    border: 1px solid black;
-}
+/*div, li, header {*/
+/*    border: 1px solid black;*/
+/*}*/
 
 .first-section {
     background-image: url("assets/img/fotka.png");
@@ -27,6 +27,7 @@ div, li, header {
     background-size: cover;
     height: 100vh;
     padding: 30px;
+    position: relative;
 }
 
 .navbar {
@@ -83,6 +84,9 @@ div, li, header {
 
 .main-header {
     color: var(--white);
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
 }
 
 .contact-button {
@@ -100,6 +104,9 @@ div, li, header {
 }
 
 .contact-icons {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
     color: var(--white);
     height: 80px;
     display: flex;
@@ -230,6 +237,9 @@ div, li, header {
     background-color: white;
     height: 800px;
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .customer-reviews-content {
@@ -258,6 +268,43 @@ div, li, header {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.our-knowledge {
+    background-color: var(--grey);
+    display: flex;
+}
+
+.our-knowledge header {
+    width: 40%;
+    padding: 40px;
+}
+
+.slide {
+    background-color: white;
+    width: 350px;
+    height: 550px;
+    text-align: center;
+
+}
+
+.slide-img {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.best-furniture-parallax {
+    background-image: url("assets/img/kuchnia2.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    background-color: var(--grey);
 }
 
 @media screen and (max-width: 800px) {
