@@ -64,11 +64,11 @@ body {
     color: gainsboro;
 }
 
-#side-menu-trigger {
+#mobile-menu-trigger {
     margin: 10px;
 }
 
-#side-menu-trigger button {
+#mobile-menu-trigger button {
     background-color: rgba(0,0,0,0);
     border: 0;
     cursor: pointer;
@@ -211,7 +211,7 @@ body {
         text-align: center;
     }
 
-    #side-menu-trigger button {
+    #mobile-menu-trigger button {
         display: block;
     }
 }
