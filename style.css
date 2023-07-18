@@ -15,6 +15,10 @@ h1, p {
     margin-block-end: 0;
 }
 
+p {
+    margin: 5px 0 0;
+}
+
 /*TEST*/
 /*div, li, header {*/
 /*    border: 1px solid black;*/
@@ -262,6 +266,7 @@ h1, p {
     background-color: rgba(0,0,0,0);
     width: 230px;
     height: 40px;
+    cursor: pointer;
 }
 
 .logo-review {
@@ -301,11 +306,105 @@ h1, p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.best-furniture-parallax header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.best-furniture-parallax-transparent-text {
+    font-family: Montserrat, sans-serif;
+    font-size: 7vw;
+    font-weight: bold;
+    background: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: .3vw;
+    -webkit-text-stroke-color: white;
+    text-transform: uppercase;
+}
+
+#best-furniture-parallax-button {
+    background-color: rgba(0,0,0,0);
+    text-transform: uppercase;
+    border: 4px solid var(--white);
+    color: var(--white);
+    height: 40px;
+    width: 300px;
+    cursor: pointer;
+    margin: 20px;
+    font-weight: bold;
 }
 
 footer {
     background-color: var(--grey);
+    height: 60vh;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
 }
+
+footer header {
+    min-width: 220px;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.footer-contact a {
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-contact a:link, .footer-contact a:visited, .footer-contact a:active   {
+    color: var(--black);
+}
+
+
+#fname, #lname {
+    margin-bottom: 20px;
+    width: 40vw;
+    background-color: rgba(0,0,0,0);
+    border: 3px solid;
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) black;
+}
+
+#message {
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 40vw;
+    height: 400px;
+    background-color: rgba(0,0,0,0);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+#submit-button {
+    color: var(--white);
+    background-color: var(--black);
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 
 @media screen and (max-width: 800px) {
     .navbar {
