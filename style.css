@@ -29,7 +29,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     padding: 30px;
     position: relative;
 }
@@ -144,8 +144,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 200px;
+    height: 30vw;
+    max-width: 450px;
+    max-height: 300px;
+    margin: 20px;
     overflow: hidden;
 }
 
@@ -184,6 +186,10 @@ p {
     text-align: center;
 }
 
+.how-we-work > header {
+    font-size: 50px;
+}
+
 .folders {
     display: flex;
     margin: 80px 0;
@@ -193,6 +199,30 @@ p {
     background-color: var(--grey);
     padding: 20px;
     margin: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+}
+
+.folder header {
+    margin-top: 40px;
+}
+
+.folder-number {
+    background-color: var(--white);
+    border: 5px solid var(--grey);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: -50px
 }
 
 #folders-button {
@@ -200,6 +230,7 @@ p {
     color: var(--white);
     width: 400px;
     height: 40px;
+    cursor: pointer;
 }
 
 .about-us {
@@ -224,6 +255,8 @@ p {
     color: var(--white);
     width: 100px;
     height: 40px;
+    cursor: pointer;
+    margin-top: 30px;
 }
 
 .customer-reviews {
@@ -285,6 +318,13 @@ p {
     padding: 40px;
 }
 
+#our-knowledge-button {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .slide {
     background-color: white;
     width: 350px;
@@ -297,6 +337,13 @@ p {
     width: 300px;
     height: 200px;
     overflow: hidden;
+}
+
+.our-knowledge-slide-button {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .best-furniture-parallax {
@@ -339,6 +386,10 @@ p {
     cursor: pointer;
     margin: 20px;
     font-weight: bold;
+}
+
+#best-furniture-parallax-button:hover {
+    color: var(--grey);
 }
 
 footer {
@@ -428,5 +479,20 @@ footer header {
 
     #mobile-menu-trigger button {
         display: block;
+    }
+
+    .gallery-image {
+        min-width: 450px;
+        min-height: 300px;
+
+    }
+
+    .folders {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .folder {
+       margin: 40px 0;
     }
 }
