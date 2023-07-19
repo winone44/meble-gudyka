@@ -285,12 +285,17 @@ button, input[type=submit], p {
 
 .about-us-text {
     width: 50%;
+    padding: 40px;
 }
 
 #about-us-image-container {
     background-color: var(--white);
     padding: 10px;
+    width: 50%;
+}
 
+#about-us-image-container img {
+    width: 100%;
 }
 
 #about-us-button {
@@ -360,11 +365,16 @@ button, input[type=submit], p {
 .our-knowledge {
     background-color: var(--grey);
     display: flex;
+
 }
 
-.our-knowledge header {
+.our-knowledge > header {
     width: 40vw;
     padding: 40px;
+}
+
+.our-knowledge > header > p {
+    line-height: 1.5;
 }
 
 .our-knowledge-content {
@@ -376,6 +386,10 @@ button, input[type=submit], p {
     color: var(--white);
     font-weight: bold;
     cursor: pointer;
+    width: 120px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 1rem;
 }
 
 .slider-nav {
@@ -411,6 +425,9 @@ button, input[type=submit], p {
     height: 550px;
     text-align: center;
     flex: 0 0 calc(100% / 3);
+    padding: 30px 20px;
+
+
 }
 
 .slider-item:not(:last-child) {
@@ -418,14 +435,32 @@ button, input[type=submit], p {
 }
 
 .slide-img {
-    width: 200px;
-    height: 100px;
+    width: 100%;
+    height: 40%;
     overflow: hidden;
 }
 
 .slide-img img {
     max-height: 100%;
     object-fit: contain;
+}
+
+.slider-item-text {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+}
+
+.slider-item-text .item-date {
+    font-size: 0.6rem;
+}
+
+.slider-item-text > p {
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .our-knowledge-slide-button {
@@ -483,7 +518,6 @@ button, input[type=submit], p {
 
 footer {
     background-color: var(--grey);
-    height: 60vh;
     padding: 100px 50px 50px;
     display: flex;
     justify-content: space-between;
@@ -502,7 +536,7 @@ footer header p {
 .footer-contact {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin: 50px 0;
     font-size: 1.5rem;
 }
 
@@ -550,6 +584,7 @@ footer header p {
     height: 30px;
     cursor: pointer;
     margin-top: 10px;
+    float: right;
 }
 
 
@@ -582,11 +617,23 @@ footer header p {
         display: block;
     }
 
-    .gallery-image {
-        min-width: 450px;
-        min-height: 300px;
-
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
     }
+
+    .gallery > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .gallery-image {
+        height: 50vw;
+    }
+
 
     .folders {
         display: flex;
@@ -597,4 +644,47 @@ footer header p {
        margin: 40px 0;
     }
 
+    .about-us {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-us-text {
+        width: auto;
+
+    }
+
+    #about-us-image-container {
+        width: auto;
+    }
+
+    .customer-reviews-content > h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-reviews-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .social-review > svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #fname, #lname {
+        width: 80vw;
+    }
+
+    #message {
+        width: 80vw;
+    }
 }
