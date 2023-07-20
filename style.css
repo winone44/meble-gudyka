@@ -419,7 +419,7 @@ button, input[type=submit], p {
 .slider-wrapper {
     display: flex;
     transition: transform 0.3s ease-in-out;
-    width: 1150px;
+    width: 1450px;
 
 }
 
@@ -428,15 +428,14 @@ button, input[type=submit], p {
     width: 230px;
     height: 550px;
     text-align: center;
-    /*flex: 0 0 calc(100%/3);*/
     padding: 30px 20px;
 
 
 }
 
-.slider-item:not(:last-child) {
-    margin-right: 20px;
-}
+/*.slider-item:not(:last-child) {*/
+/*    margin-right: 20px;*/
+/*}*/
 
 .slide-img {
     width: 100%;
