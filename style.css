@@ -646,7 +646,7 @@ textarea:focus-within {
     height: 40px;
     cursor: pointer;
     margin-top: 10px;
-    align-self: flex-end;
+    float: right;
 }
 
 
