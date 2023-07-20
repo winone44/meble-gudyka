@@ -385,8 +385,13 @@ button, input[type=submit], p {
 
 }
 
+.our-knowledge > header > hr {
+    float: left;
+}
+
 .our-knowledge > header > p {
     line-height: 1.5;
+    clear: both;
 }
 
 .our-knowledge-content {
@@ -537,12 +542,17 @@ footer {
     justify-content: space-between;
 }
 
-footer header {
+footer > header {
     min-width: 220px;
     padding-right: 20px;
 }
 
-footer header p {
+footer > header > hr {
+    float: left;
+}
+
+footer > header > p {
+    clear:both;
     font-family: Playfair Display, serif;
     font-weight: 400;
     font-size: 2rem;
@@ -799,6 +809,7 @@ textarea:focus-within {
         width: 100%
     }
 
+
     .our-knowledge-content {
         margin-top: 40px;
         width: 100%;
@@ -808,6 +819,7 @@ textarea:focus-within {
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding: 50px 25px 25px;
     }
 
     footer header {
