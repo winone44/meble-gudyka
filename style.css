@@ -49,8 +49,7 @@ button, input[type=submit], p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 80vh;
-    height: 80vh;
+    height: calc(100vh - 60px);
     padding: 30px;
     position: relative;
 }
@@ -283,6 +282,10 @@ button, input[type=submit], p {
     padding: 40px;
 }
 
+.about-us > div {
+    width: 100%;
+}
+
 .about-us-text {
     width: 50%;
     padding: 40px;
@@ -291,7 +294,6 @@ button, input[type=submit], p {
 #about-us-image-container {
     background-color: var(--white);
     padding: 10px;
-    width: 50%;
 }
 
 #about-us-image-container img {
@@ -365,12 +367,12 @@ button, input[type=submit], p {
 .our-knowledge {
     background-color: var(--grey);
     display: flex;
-
+    padding: 40px 0 40px 40px;
 }
 
 .our-knowledge > header {
     width: 40vw;
-    padding: 40px;
+
 }
 
 .our-knowledge > header > p {
@@ -417,14 +419,16 @@ button, input[type=submit], p {
 .slider-wrapper {
     display: flex;
     transition: transform 0.3s ease-in-out;
+    width: 1150px;
+
 }
 
 .slider-item {
     background-color: white;
-    width: 180px;
+    width: 230px;
     height: 550px;
     text-align: center;
-    flex: 0 0 calc(100% / 3);
+    /*flex: 0 0 calc(100%/3);*/
     padding: 30px 20px;
 
 
@@ -454,11 +458,15 @@ button, input[type=submit], p {
     height: 60%;
 }
 
-.slider-item-text .item-date {
+.slider-item-text > div > h4 {
+    font-size: 1.5rem;
+}
+
+.item-date {
     font-size: 0.6rem;
 }
 
-.slider-item-text > p {
+.slider-item-text > div > p {
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -525,6 +533,7 @@ footer {
 
 footer header {
     min-width: 220px;
+    padding-right: 20px;
 }
 
 footer header p {
@@ -550,49 +559,90 @@ footer header p {
     color: var(--black);
 }
 
+.footer-contact a:hover {
+    color: grey;
+}
 
-#fname, #lname {
-    margin-bottom: 20px;
-    width: 40vw;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    position: relative;
+
+}
+
+label > input {
+    border-bottom: 4px solid black;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    height: 100%;
     background-color: rgba(0,0,0,0);
-    border: 3px solid;
-    border-color: rgba(0,0,0,0) rgba(0,0,0,0) black;
+}
+
+textarea {
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+    opacity: 0;
+}
+
+.contact-form span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(30px);
+    font-size: 1.2rem;
+    transition-duration: 300ms;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: var(--grey);
+    margin-left: 10px;
+}
+
+label:focus-within > span,
+input:not(:placeholder-shown) + span,
+textarea:not(:placeholder-shown) + span{
+    transform: translateY(5px);
+}
+
+label:focus-within > span {
+    color: gray;
+}
+
+label:focus-within > input {
+    border-bottom: 4px solid gray;
+}
+
+textarea:focus-within {
+    border: 4px solid gray;
 }
 
 #message {
-    border: 3px solid black;
-    border-radius: 20px;
     width: 40vw;
     height: 40vh;
-    background-color: rgba(0,0,0,0);
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
-    font-weight: bold;
-    padding: 0 5px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
-    font-weight: bold;
-    padding: 0 5px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    opacity: 1; /* Firefox */
-}
 
 #submit-button {
     color: var(--white);
     background-color: var(--black);
     font-weight: bold;
     width: 100px;
-    height: 30px;
+    height: 40px;
     cursor: pointer;
     margin-top: 10px;
-    float: right;
+    align-self: flex-end;
 }
 
 
@@ -688,8 +738,8 @@ footer header p {
         flex-direction: column;
     }
 
-    #fname, #lname {
-        width: 80vw;
+    footer header {
+        padding-right: 0;
     }
 
     #message {
