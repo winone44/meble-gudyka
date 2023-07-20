@@ -51,14 +51,27 @@ button, input[type=submit], p {
     background-size: cover;
     height: calc(100vh - 60px);
     min-height: 400px;
-    padding: 30px;
     position: relative;
+    padding-top: 20px;
 }
 
-.navbar {
+#navbar {
     background-color: rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-between;
+    z-index: 999;
+    width: 90%;
+    transition: 0.3s ease-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0;
+    width: 100% !important;
+    background-color: rgba(0,0,0,0.75) !important;
 }
 
 /*LOGO*/
@@ -656,7 +669,7 @@ textarea:focus-within {
         max-width: 800px;
     }
 
-    .navbar {
+    #navbar {
         display: block;
         padding: 10px;
 

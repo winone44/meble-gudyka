@@ -8,7 +8,7 @@
 <body>
 <main>
     <section class="first-section">
-        <div class="navbar">
+        <div id="navbar">
             <div style="display: flex; justify-content: space-between;">
                 <div class="logo">
                     <a href="#"><img src="assets/img/logo.png" alt="logo"></a>
@@ -430,6 +430,23 @@
 </footer>
 
 <script>
+    //sticky menu
+    window.onscroll = function() {myFunction()};
+
+    let navbar = document.getElementById("navbar");
+    let sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.scrollY > sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        console.log('window.pageYOffset: ' + window.pageYOffset );
+        console.log('sticky: ' + sticky);
+    }
+
+
 
     //slider
     document.addEventListener('DOMContentLoaded', function () {
