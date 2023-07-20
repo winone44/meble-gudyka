@@ -429,13 +429,9 @@ button, input[type=submit], p {
     height: 550px;
     text-align: center;
     padding: 30px 20px;
-
+    border-left: 15px solid var(--grey);
 
 }
-
-/*.slider-item:not(:last-child) {*/
-/*    margin-right: 20px;*/
-/*}*/
 
 .slide-img {
     width: 100%;
@@ -475,6 +471,7 @@ button, input[type=submit], p {
     color: var(--white);
     font-weight: bold;
     cursor: pointer;
+    padding: 5px 10px;
 }
 
 .best-furniture-parallax {
@@ -729,6 +726,21 @@ textarea:focus-within {
     .social-review > svg {
         width: 50px;
         height: 50px;
+    }
+
+    .our-knowledge {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .our-knowledge > header {
+        width: 100%
+    }
+
+    .our-knowledge-content {
+        margin-top: 40px;
+        width: 100%;
     }
 
     footer {
