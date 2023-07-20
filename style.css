@@ -50,6 +50,7 @@ button, input[type=submit], p {
     background-position: center;
     background-size: cover;
     height: calc(100vh - 60px);
+    min-height: 400px;
     padding: 30px;
     position: relative;
 }
@@ -221,10 +222,6 @@ button, input[type=submit], p {
     text-align: center;
 }
 
-.how-we-work > header {
-    font-size: 50px;
-}
-
 .folders {
     display: flex;
     margin: 80px 0;
@@ -270,8 +267,7 @@ button, input[type=submit], p {
 #folders-button {
     background-color: var(--black);
     color: var(--white);
-    width: 400px;
-    height: 40px;
+    padding: 10px 60px;
     cursor: pointer;
 }
 
@@ -356,6 +352,7 @@ button, input[type=submit], p {
     width: 230px;
     height: 40px;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .logo-review {
@@ -560,13 +557,11 @@ footer header p {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
-label {
+.label-div {
     position: relative;
-
 }
 
 label > input {
@@ -643,6 +638,20 @@ textarea:focus-within {
 
 
 @media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+
     section {
         max-width: 800px;
     }
@@ -669,6 +678,20 @@ textarea:focus-within {
 
     #mobile-menu-trigger button {
         display: block;
+    }
+
+
+    .main-header {
+        width: 250px;
+    }
+
+    /*.main-header > h2 {*/
+    /*    font-size: 2rem;*/
+    /*}*/
+
+    .main-header > p {
+        font-weight: 500;
+        font-size: .850rem;
     }
 
     .gallery {
@@ -698,6 +721,12 @@ textarea:focus-within {
        margin: 40px 0;
     }
 
+    #folders-button {
+        padding: 10px 0px;
+        width: 100%;
+    }
+
+
     .about-us {
         display: flex;
         align-items: center;
@@ -713,8 +742,26 @@ textarea:focus-within {
         width: auto;
     }
 
+    .customer-reviews {
+        height: 900px;
+    }
+
+    .customer-reviews-content-bg {
+        height: 725px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 60px);
+        background-color: rgba(255, 255, 255,0.6)
+    }
+
     .customer-reviews-content > h1 {
         font-size: 2.5rem;
+        /*color: var(--grey);*/
+    }
+
+    .customer-reviews-content > p {
+        /*color: var(--grey);*/
     }
 
     .social-reviews-container {
@@ -727,6 +774,7 @@ textarea:focus-within {
         width: 50px;
         height: 50px;
     }
+
 
     .our-knowledge {
         flex-direction: column;
