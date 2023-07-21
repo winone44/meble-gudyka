@@ -160,13 +160,15 @@ button, input[type=submit], p {
     right: 20px;
     bottom: 30px;
     color: var(--white);
-    height: 80px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .contact-icons svg {
+    height: 28px;
+    width: 28px;
     cursor: pointer;
     transition: 0.2s;
 }
