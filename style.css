@@ -60,11 +60,12 @@ button, input[type=submit], p {
     display: flex;
     justify-content: space-between;
     z-index: 999;
-    width: 90%;
+    width: 95%;
     transition: 0.3s ease-out;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 1.4rem;
 }
 
 .sticky {
@@ -72,11 +73,15 @@ button, input[type=submit], p {
     top: 0;
     width: 100% !important;
     background-color: rgba(0,0,0,0.75) !important;
+    backdrop-filter: blur(10px);
 }
 
 /*LOGO*/
 .logo {
-    margin: 10px 10px 10px 30px;
+    margin: 0 0 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logo img {
     width: 110px;
@@ -123,7 +128,7 @@ button, input[type=submit], p {
 .main-header {
     color: var(--white);
     position: absolute;
-    left: 30px;
+    left: 2.5vw;
     bottom: 30px;
     width: 400px;
 }
@@ -660,7 +665,7 @@ textarea:focus-within {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
     h1 {
         font-size: 3rem;
@@ -676,13 +681,14 @@ textarea:focus-within {
 
 
     section {
-        max-width: 800px;
+        max-width: 900px;
     }
 
     #navbar {
         display: block;
         padding: 10px;
-
+        width: 90%;
+        font-size: 1rem;
     }
 
     #nav-links {
@@ -706,6 +712,7 @@ textarea:focus-within {
 
     .main-header {
         width: 250px;
+        bottom: 0;
     }
 
     /*.main-header > h2 {*/
