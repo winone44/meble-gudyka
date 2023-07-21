@@ -177,11 +177,11 @@ button, input[type=submit], p {
     color: var(--black);
 }
 
-.second-section {
+.other-projects {
     padding: 20px;
 }
 
-.second-section header {
+.other-projects header {
     text-align: center;
     padding: 20px 0;
 }
