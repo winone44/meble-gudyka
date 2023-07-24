@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextButton = document.querySelector('.slider-next');
 
     const containerWidth = sliderContainer.clientWidth;
-    const itemWidth = sliderItem.offsetWidth; //290
+    const itemWidth = sliderItem.offsetWidth;
     const itemsCount = sliderWrapper.children.length;
     const wrapperWidth = itemWidth * itemsCount;
     const visibleItems = Math.floor(containerWidth / itemWidth);
