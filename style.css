@@ -373,7 +373,6 @@ button, input[type=submit], p {
     flex-direction: column;
 }
 
-
 .users-reviews-button {
     margin: 20px;
     background-color: rgba(0,0,0,0);
@@ -382,6 +381,30 @@ button, input[type=submit], p {
     cursor: pointer;
     border: 1px solid black;
     transition: 0.2s;
+}
+
+.users-reviews-button:hover {
+    transform: scale(0.9);
+}
+
+#google-icon {
+    cursor: pointer;
+    transition: .2s;
+}
+
+#google-icon:hover {
+    color: #db4a39;
+    transform: scale(0.9);
+}
+
+#facebook-icon {
+    cursor: pointer;
+    transition: .2s;
+}
+
+#facebook-icon:hover {
+    color: #3b5998;
+    transform: scale(0.9);
 }
 
 .users-reviews-button:hover {
@@ -424,10 +447,13 @@ button, input[type=submit], p {
     font-weight: bold;
     cursor: pointer;
     padding: .5em 1.5em;
-    /*width: 120px;*/
-    /*height: 30px;*/
     margin-top: 20px;
     font-size: 1rem;
+    transition: .2s;
+}
+
+#our-knowledge-button:hover {
+    transform: scale(0.9);
 }
 
 .slider-nav {
@@ -511,6 +537,11 @@ button, input[type=submit], p {
     font-weight: bold;
     cursor: pointer;
     padding: 5px 10px;
+    transition: .2s;
+}
+
+.our-knowledge-slide-button:hover {
+    transform: scale(0.9);
 }
 
 .best-furniture-parallax {
@@ -685,6 +716,11 @@ textarea:focus-within {
     cursor: pointer;
     margin-top: 10px;
     float: right;
+    transition: 0.2s;
+}
+
+#submit-button:hover {
+    transform: scale(0.9);
 }
 
 
