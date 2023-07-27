@@ -145,11 +145,10 @@ button, input[type=submit], p {
     color: #111;
 }
 
-.contact-icons {
+.contact-icons{
     position: absolute;
     right: 20px;
     bottom: 30px;
-    color: var(--white);
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -161,6 +160,10 @@ button, input[type=submit], p {
     width: 28px;
     cursor: pointer;
     transition: 0.2s;
+}
+
+.contact-icons a {
+    color: var(--white);
 }
 
 .contact-icons svg:hover {
