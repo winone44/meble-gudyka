@@ -1,5 +1,7 @@
 //sticky menu
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+    myFunction()
+};
 
 let navbar = document.getElementById("navbar");
 let sticky = navbar.offsetTop;
@@ -11,7 +13,6 @@ function myFunction() {
         navbar.classList.remove("sticky");
     }
 }
-
 
 
 //slider
@@ -94,3 +95,18 @@ document.getElementById("mobile-menu-trigger").addEventListener("click", functio
         myDiv.style.display = "flex";
     }
 });
+
+//scroll-behavior
+function scrollToOtherProjects() {
+    const element = document.querySelector('.other-projects');
+    if (element) {
+        element.scrollIntoView({behavior: 'smooth'});
+    }
+}
+function scrollToFooter() {
+    const element = document.querySelector('footer');
+    if (element) {
+        element.scrollIntoView({behavior: 'smooth'});
+    }
+}
+
