@@ -69,12 +69,28 @@ document.addEventListener('DOMContentLoaded', function () {
     let touchStartX = 0;
     let touchEndX = 0;
 
+    sliderWrapper.addEventListener('mousedown', function (event) {
+        touchStartX = event.pageX;
+    });
+
     sliderWrapper.addEventListener('touchstart', function (event) {
         touchStartX = event.touches[0].clientX;
     });
 
+    sliderWrapper.addEventListener('mousemove', function (event) {
+        touchEndX = event.pageX;
+    });
+
     sliderWrapper.addEventListener('touchmove', function (event) {
         touchEndX = event.touches[0].clientX;
+    });
+
+    sliderWrapper.addEventListener('mouseup', function () {
+        if (touchEndX < touchStartX) {
+            nextButton.click();
+        } else if (touchEndX > touchStartX) {
+            prevButton.click();
+        }
     });
 
     sliderWrapper.addEventListener('touchend', function () {
